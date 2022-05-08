@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">NativeAndroidResources Bootcamp</string>
     <string name="set_event_on_calendar">Set Event on Calendar</string>
-    <string name="imported_contacts_title">Imported Contacts</string>
+    <string name="contacts_title">Contacts</string>
+    <string name="calendar_title">Calendar</string>
+    <string name="gallery_title">Gallery</string>
+    <string name="selected_user_image_description">Selected user image</string>
+    <string name="pick_gallery_image">Choose an Image</string>
 </resources>

@@ -1,44 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
     tools:context=".MainActivity">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/set_event_on_calendar"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:padding="10dp"
-        android:text="@string/set_event_on_calendar"
-        app:cornerRadius="10dp"
-        app:layout_constraintBottom_toTopOf="@id/contacts_title"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <TextView
-        android:id="@+id/contacts_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/imported_contacts_title"
-        android:textSize="26sp"
-        android:textColor="@color/black"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/set_event_on_calendar" />
+        <TextView
+            android:id="@+id/calendar_title"
+            style="@style/Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/calendar_title" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/contacts_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/contacts_title"
-        tools:listitem="@layout/contact_view_item" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/set_event_on_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:padding="10dp"
+            android:text="@string/set_event_on_calendar"
+            app:cornerRadius="10dp" />
+
+        <View
+            style="@style/Separator"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginVertical="16dp" />
+
+        <TextView
+            android:id="@+id/contacts_title"
+            style="@style/Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/contacts_title" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/contacts_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/recycler_bg"
+            android:padding="10dp"
+            tools:listitem="@layout/contact_view_item" />
+
+        <View
+            style="@style/Separator"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginVertical="16dp" />
+
+        <TextView
+            android:id="@+id/gallery_title"
+            style="@style/Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gallery_title" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/pick_gallery_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:padding="10dp"
+            android:text="@string/pick_gallery_image"
+            app:cornerRadius="10dp" />
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/selected_user_image_description"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_image" />
+
+    </LinearLayout>
+</ScrollView>

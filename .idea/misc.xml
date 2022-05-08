@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_image.xml" value="0.103" />
+        <entry key="app/src/main/res/drawable/recycler_bg.xml" value="0.103" />
+        <entry key="app/src/main/res/drawable/round_outline.xml" value="0.103" />
+        <entry key="app/src/main/res/layout-v31/activity_main.xml" value="0.3052536231884058" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="app/src/main/res/layout/contact_view.xml" value="0.265625" />
       </map>
