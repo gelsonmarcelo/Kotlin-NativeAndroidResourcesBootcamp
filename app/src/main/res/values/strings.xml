@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">NativeAndroidResources Bootcamp</string>
+    <string name="set_event_on_calendar">Set Event on Calendar</string>
+</resources>
